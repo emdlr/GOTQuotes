@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom'; 
 import "../App.css";
 
 class Header extends Component {
@@ -6,39 +7,25 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      //
+      characters:[]
     };
   }
-
-  getAllQuotes = (props) => {
-    alert("hi");
-    //     //   QuoteList products={this.props.allproducts} />;
-    //     // const Header = (props) => {
-    //     let allQuotes = props.allAPIData.map((quote, index) => {
-    //       return (
-    //         <div key={index}>
-    //           <h3>
-    //             {/* <img src={`./images/${product.image}`} /> */}
-    //             <div>
-    //               {quote.sentence} &nbsp; &nbsp; ${quote.character.name}{" "}
-    //             </div>
-    //           </h3>
-    //         </div>
-    //       );
-    //     });
-    //     return <div>{allQuotes}</div>;
-  };
-
   render() {
     return (
-      <div className="App-header">
-        <h3> GotQuotes </h3>
-        <input type="button" value="RandomQuotes" onClick=""></input>
-        <input
-          type="button"
-          value="AllQuotes"
-          onClick={this.getAllQuotes}
-        ></input>
+      <div className="header">
+        <div className="title">
+          <Link to="/">
+            <p> GotQuotes </p>
+          </Link>
+        </div>
+        <div className="doropDown">
+          <select>
+            <option selected></option>
+              {this.props.allQuotes.map((quote,idx) =>{
+        return(<option key={idx} value={quote.character.name}>{quote.character.name}</option>);
+              })}
+          </select>
+        </div>
       </div>
     );
   }
