@@ -1,11 +1,12 @@
 import "./App.css";
 import React, { Component } from "react";
 import axios from "axios";
-import {Switch, Route, useHistory} from 'react-router-dom'; 
+import {Switch, Route} from 'react-router-dom'; 
 import MainRandomQuote from "./components/MainRandomQuote";
 import Header from "./components/Header";
 import Character from "./components/Character";
 
+//App is the main component in charge to contain all the components used in this project
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,6 +19,8 @@ class App extends Component {
       clicked:false
     };
   }
+  //getMainRandomQuote is in charge to get fetch data form the Random quote endpoint
+  //from the Game of thrones API
   getMainRandomQuote = () =>{
     axios.get("https://game-of-thrones-quotes.herokuapp.com/v1/random",
     {
@@ -31,6 +34,7 @@ class App extends Component {
       });
     });
   }
+  //compoenenDidMount is in chage to download data to get the characters info
   componentDidMount = () => {
     axios.get("https://game-of-thrones-quotes.herokuapp.com/v1/random/10",
       {
@@ -57,8 +61,10 @@ class App extends Component {
         });
       });
       this.getMainRandomQuote();
-      this.time = setInterval(this.getMainRandomQuote,7000)
-  };
+      this.time = setInterval(this.getMainRandomQuote,6000)
+  }
+  //Change character is a "bell" function that indicates App the single player
+  //is changing on Character component.
   changeCharacter = (value) =>{
     this.setState({
       newCharacter:value,
