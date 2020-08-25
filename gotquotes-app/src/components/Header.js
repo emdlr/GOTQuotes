@@ -7,8 +7,19 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      characters:[]
+      characters:[],
+      path:""
     };
+  }
+  getPath = (e) =>{
+    e.preventDefault();
+    let name = e.target.value.substring(0,e.target.value.indexOf(" "));
+    this.setState({
+      path: `/character/${name.toLowerCase()}`
+    }) 
+  }
+  change = () =>{
+    this.props.changeCharacter(true);
   }
   render() {
     return (
@@ -19,12 +30,13 @@ class Header extends Component {
           </Link>
         </div>
         <div className="doropDown">
-          <select>
-            <option selected></option>
-              {this.props.allQuotes.map((quote,idx) =>{
-        return(<option key={idx} value={quote.character.name}>{quote.character.name}</option>);
-              })}
+          <select onChange={this.getPath}>
+            <option value="names"></option>
+              {this.props.allNames.map((name,idx) =>{
+        return(<option key={idx} value={name}>{name}</option>);
+              })} 
           </select>
+          <Link to={this.state.path} onClick={this.change}> Search </Link>
         </div>
       </div>
     );
