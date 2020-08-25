@@ -13,13 +13,21 @@ class Header extends Component {
   }
   getPath = (e) =>{
     e.preventDefault();
-    let name = e.target.value.substring(0,e.target.value.indexOf(" "));
-    this.setState({
-      path: `/character/${name.toLowerCase()}`
-    }) 
+    if(e.target.value!=="names"){
+      let name = (e.target.value.substring(0,e.target.value.indexOf(" "))!==""?e.target.value.substring(0,e.target.value.indexOf(" ")):e.target.value);
+      console.log(name)
+      this.setState({
+        path: `/character/${name.toLowerCase()}`
+      })
+    }else{
+      this.setState({
+        path: "/"
+      })
+    }
   }
   change = () =>{
-    this.props.changeCharacter(true);
+    if(this.state.path!=="/")
+      this.props.changeCharacter(true);
   }
   render() {
     return (

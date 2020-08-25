@@ -14,23 +14,10 @@ class App extends Component {
       allNames: [],
       mainRandomQuote:[],
       allData:[],
-      newCharacter:true
+      newCharacter:true,
+      clicked:false
     };
   }
-  // selectedCharacter = (name) =>{
-  //    if(this.timer!=="")
-  //      clearInterval(this.timer);
-
-  //      axios.get(`https://game-of-thrones-quotes.herokuapp.com/v1/author/${name}/5`,
-  //      {
-  //          headers: {
-  //            Accept: "application/json",
-  //          },
-  //        }
-  //      ).then((response) => {
-  //         this.setState({character:response.data});
-  //      });   
-  // }
   getMainRandomQuote = () =>{
     axios.get("https://game-of-thrones-quotes.herokuapp.com/v1/random",
     {
@@ -70,11 +57,12 @@ class App extends Component {
         });
       });
       this.getMainRandomQuote();
-     // this.time = setInterval(this.getMainRandomQuote,7000)
+      this.time = setInterval(this.getMainRandomQuote,7000)
   };
   changeCharacter = (value) =>{
     this.setState({
-      newCharacter:value
+      newCharacter:value,
+      clicked:!this.state.clicked
     })
   }
   render() {
