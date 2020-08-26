@@ -53,6 +53,8 @@ deployment :-
 App homepage Wireframe: (included under documents folder)
 
 ![Webpage Layout](documents/homepage_wireframe.jpg)
+![Search Layout](documents/search_wireframe.jpg)
+![Search_Nav Layout](documents/search_wireframe1.jpg)
 
 ## Technologies
 
