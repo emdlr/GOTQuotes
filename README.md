@@ -56,6 +56,7 @@ App homepage Wireframe: (included under documents folder)
 
 ## Technologies
 
+- Visual Studio Code – Main Development Tool
 - REACT Framework
 - CSS
 - JavaScript
