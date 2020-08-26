@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import images from '../images.json'
 import axios from 'axios';
 //Character component is in charge to hande functionality for
 //single character display
@@ -11,15 +12,17 @@ export default class Character extends Component{
 
         this.state = {
             character:[],
+            image:"",
             quote:"",
             view:true,
-            name:""
+            name:"",
+            bio:""
         }
     }
     //loadCharacter is in charge to hit the API with the parameter name of
     //a selected character to display it/them on the Character component
     loadCharacter = () =>{
-        let characterAPI =this.translateName(this.props.match.params.name);
+        let characterAPI=this.translateName(this.props.match.params.name);
         axios.get(`https://game-of-thrones-quotes.herokuapp.com/v1/author/${characterAPI}/5`,
         {
             headers: {
@@ -27,9 +30,21 @@ export default class Character extends Component{
             },
           }
         ).then((response) => {
+            //Getting Character Image
+            let img;
+            let bio;
+            for(const prop in images)
+               if(images[prop].name===characterAPI){
+                   img = images[prop].img;
+                   bio = images[prop].bio;
+               }
+                    
            this.setState(
                {character:response.data,
-                 quote:""})
+                 image:img,
+                 quote:"",
+                 bio:bio
+                })
         }); 
      }
     //Display Random will trigger getRandomInt to display a quite
@@ -59,18 +74,19 @@ export default class Character extends Component{
     //Translate name will give the correct format of the name for some characters
     //that come from the API to hit another end point that requies a diff. format
     translateName = (name) =>{
-        let newC=name.toLowerCase();
-        switch(newC){
+        let newName=name.toLowerCase();
+        switch(newName){
             case "eddard":
-                newC="ned";
+                newName="ned";
                 break;
             case "lord":
-                newC="varys";
-                break;
+                newName="varys";
+               break;
             case "petyr":
-                newC="baelish";
+                newName="baelish";
+                break;
         }
-        return newC;
+        return newName;
     }
     render(){
         if(this.props.newCharacter){
@@ -89,7 +105,7 @@ export default class Character extends Component{
          }) 
         return(
             <div className="characterContainer">
-                <div className="chImg"><img src="" alt="(IMG)"/></div>
+                <div><a href={this.state.bio}><img className="chImg" src={this.state.image} alt={this.name}/></a></div>
                 <div className="characterBtns">
                     <table> 
                         <tr>

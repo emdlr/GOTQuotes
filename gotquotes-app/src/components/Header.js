@@ -17,7 +17,6 @@ class Header extends Component {
     e.preventDefault();
     if(e.target.value!=="names"){
       let name = (e.target.value.substring(0,e.target.value.indexOf(" "))!==""?e.target.value.substring(0,e.target.value.indexOf(" ")):e.target.value);
-      console.log(name)
       this.setState({
         path: `/character/${name.toLowerCase()}`
       })
