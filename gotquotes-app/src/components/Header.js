@@ -34,24 +34,23 @@ class Header extends Component {
   }
   render() {
     return (
-      <div className="header">
-        <div className="title">
-          <Link to="/">
-            <p> GotQuotes </p>
+      <div className="hContainer">
+          <Link className="title" to="/">
+            <center>
+              <p className="hTitle"> G O T &nbsp;&nbsp; RANDOM &nbsp;&nbsp; QUOTES </p>
+            </center>
           </Link>
-        </div>
-        <div className="doropDown">
-          <select onChange={this.getPath}>
-            <option value="names"></option>
-              {this.props.allNames.map((name,idx) =>{
-        return(<option key={idx} value={name}>{name}</option>);
-              })} 
-          </select>
-          <Link to={this.state.path} onClick={this.change}> Search </Link>
-        </div>
+          <div className="navbar">
+            <select className="dropdown" onChange={this.getPath}>
+              <option value="names"></option>
+                {this.props.allNames.map((name,idx) =>{
+          return(<option key={idx} value={name}>{name}</option>);
+                })} 
+            </select>
+            <Link className="searchButton" to={this.state.path} onClick={this.change}> Search </Link>
+          </div>
       </div>
     );
   }
 }
-
 export default Header;

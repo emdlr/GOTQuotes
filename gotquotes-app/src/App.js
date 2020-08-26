@@ -76,11 +76,16 @@ class App extends Component {
       <div className="App">
         <Header allNames={this.state.allNames} selectedCharacter={this.selectedCharacter} getMainRQ={this.getMainRandomQuote} changeCharacter={this.changeCharacter} />
         <main className ="mainContainer">
+          <banner className="banners" id="b1"></banner>
           <Switch>
             <Route exact path="/" render={(routerProps)=><MainRandomQuote {...this.state}{...routerProps}/>}/>
             <Route path="/character/:name" render={(routerProps)=><Character {...this.state}changeCharacter={this.changeCharacter}{...routerProps}/>}/>
           </Switch>
+          <banner className="banners" id="b2"></banner>
         </main>
+        <footer class="footer">
+          <p>Inspirational Quotes App, by Edgar and Sachin. &nbsp;&nbsp;</p>
+        </footer>
       </div>
     );
   }
