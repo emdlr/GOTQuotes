@@ -7,9 +7,9 @@ Team:
 
 <!-- ![designerApp GIF](public/images/homepage.gif) -->
 
-## Project Overview
+## Project Overview:-
 
-#Project Description
+## Project Description
 
 "Got Random Quotes" App is designed for searching the random quotes by popular characters.
 This web responsive app displays the characters name and also allows you to browse their wikipedia pages.
