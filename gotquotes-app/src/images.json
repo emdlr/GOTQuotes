@@ -108,5 +108,10 @@
        "name":"mance",
        "img":"https://i.pinimg.com/564x/88/fd/48/88fd48fe2efb5706e194cacf69573aff.jpg",
        "bio":"https://en.wikipedia.org/wiki/List_of_A_Song_of_Ice_and_Fire_characters#Mance_Rayder"
+        },
+        {
+        "name":"ramsay",
+        "img":"https://i.pinimg.com/564x/0e/42/3c/0e423c4092f0a69c4b90eb652e8cba9e.jpg",
+        "bio":"https://en.wikipedia.org/wiki/Ramsay_Bolton"
         }
 ]
