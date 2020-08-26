@@ -37,12 +37,12 @@ This web responsive app displays the characters name and also allows you to brow
 ## Project Links
 
 GitHub Repository:
-Git Master Branch :- https://github.com/emdlr/GOTQuotes/tree/master
+- Git Master Branch :- https://github.com/emdlr/GOTQuotes/tree/master
 
-Git Sub-Branches:
+- Git Sub-Branches:
 
-- Edgar :- https://github.com/emdlr/GOTQuotes/tree/edgar
-- Sachin :- https://github.com/emdlr/GOTQuotes/tree/sachin
+  - Edgar :- https://github.com/emdlr/GOTQuotes/tree/edgar
+  - Sachin :- https://github.com/emdlr/GOTQuotes/tree/sachin
 
 deployment :-
 
