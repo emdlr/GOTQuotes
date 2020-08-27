@@ -1,13 +1,18 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.title,
+.footer{
+  font-family: "Game of Thrones";
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.searchButton,
+.dropdown,
+.btns,
+.chData,
+.sQuote
+{
+  font-family: 'Pinyon Script', cursive;
+}
+.quote{
+  font-family: "Vanessa Handscript";
+}
+.name{
+  font-family: "Julia-HandScript";
 }
