@@ -12,8 +12,8 @@ export default class MainRandomQuote extends Component{
             }
         return(
             <div className="mRandomQuote">
-                <div className="quote">
-                    <p className="blockquote">{this.props.mainRandomQuote.sentence}</p>
+                 <div className="blockquote">
+                    <p className="quote">{this.props.mainRandomQuote.sentence}</p>
                     <p className="name"><i>- {cDetail.name} - </i></p>
                 </div>
             </div>

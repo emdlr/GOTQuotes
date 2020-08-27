@@ -83,8 +83,8 @@ class App extends Component {
           </Switch>
           <banner className="banners" id="b2"></banner>
         </main>
-        <footer class="footer">
-          <p>Inspirational Quotes App, by Edgar and Sachin. &nbsp;&nbsp;</p>
+        <footer className="footer">
+          <p className="sign">Inspirational GOT Quotes, by Edgar and Sachin.</p>
         </footer>
       </div>
     );

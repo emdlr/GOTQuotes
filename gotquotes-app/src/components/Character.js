@@ -105,17 +105,17 @@ export default class Character extends Component{
          }) 
         return(
             <div className="characterContainer">
-                <div><a href={this.state.bio}><img className="chImg" src={this.state.image} alt={this.name}/></a></div>
-                <div className="characterBtns">
-                    <table> 
+                <div className="fCol">
+                    <a href={this.state.bio}><img className="chImg" src={this.state.image} alt={this.name}/></a>
+                    <table className="characterBtns"> 
                         <tr>
-                            <td><input type="button" onClick={this.displayRandom} value="Random Quote"/></td>
-                            <td><input type="button" onClick={this.displayAll} value="Display All"/></td>
+                            <td><input className="btns" type="button" onClick={this.displayRandom} value="Random Quote"/></td>
+                            <td><input className="btns" type="button" onClick={this.displayAll} value="Display All"/></td>
                         </tr>
                     </table>
                 </div>
-                <div className="chData">
-                    <table>
+                <div className="quotesCont">
+                    <table className="chData">
                         <tr>
                             <td>Name:</td>
                             <td>{this.name}</td>
@@ -125,9 +125,7 @@ export default class Character extends Component{
                             <td>{this.house}</td>
                         </tr>
                     </table>
-                </div>
-                <div className="quotesArea">
-                    <ul>
+                    <ul className="quotesArea">
                         {this.state.view?this.quotes.map(qt =>{return(<li>{qt}</li>)}):<li>{this.state.quote}</li>}
                     </ul>
                 </div>
