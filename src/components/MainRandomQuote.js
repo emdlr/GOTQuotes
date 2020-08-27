@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import "../index.css";
 //MainRandomQuote will render from a bunch of characters, different 
 //rendom quotes while you stay on the home page every 6 seconds
 export default class MainRandomQuote extends Component{

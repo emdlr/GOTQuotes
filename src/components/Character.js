@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import images from '../images.json'
 import axios from 'axios';
-import "../index.css";
 //Character component is in charge to hande functionality for
 //single character display
 export default class Character extends Component{
