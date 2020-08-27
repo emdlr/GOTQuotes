@@ -214,8 +214,6 @@ a{
   font-size: 1.2vw;
   margin-top: 1vw;
 }
-.quotesCont{
-}
 .quotesArea{
   display: flex;
   flex-flow: column wrap;
