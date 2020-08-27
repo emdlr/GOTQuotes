@@ -36,10 +36,8 @@ class Header extends Component {
     return (
       <div className="hContainer">
           <Link className="title" to="/">
-            <center>
-              <p className="hTitle"> G O T &nbsp;&nbsp; RANDOM &nbsp;&nbsp; QUOTES </p>
-            </center>
-          </Link>
+            <p className="hTitle">G O T &nbsp;&nbsp; RANDOM &nbsp;&nbsp; QUOTES</p>
+            </Link>
           <div className="navbar">
             <select className="dropdown" onChange={this.getPath}>
               <option value="names"></option>
