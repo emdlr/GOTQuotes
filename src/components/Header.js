@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Link} from 'react-router-dom'; 
-import "../App.css";
+import "../index.css";
 //Header Compoenent will comntain a random list of names from the Serie avaliable
 //to display their data on the API by selecting and hitting the search button.
 class Header extends Component {

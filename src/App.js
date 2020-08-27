@@ -1,4 +1,4 @@
-import "./App.css";
+import './index.css';
 import React, { Component } from "react";
 import axios from "axios";
 import {Switch, Route} from 'react-router-dom'; 
