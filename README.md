@@ -1,3 +1,5 @@
+<img src="https://github.com/emdlr/GOTQuotes/blob/master/gotquotes-app/public/titleicon.png" alt="PetHome" width="45" height="45" />
+
 # Project 3 - Got Random Quotes
 
 Team:
