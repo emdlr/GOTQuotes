@@ -160,4 +160,4 @@ RESOLUTION: needed git add & git commit after checkout
 
 - Convert Components to Hooks
 - Use a CSS framework like Bootstrap
-- Use additional APIs
+- Use additional APIs. 
