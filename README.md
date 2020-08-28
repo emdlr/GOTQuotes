@@ -1,6 +1,6 @@
 <img src="https://github.com/emdlr/GOTQuotes/blob/master/public/titleicon.png" alt="GOTQuotes" width="50" height="50" />
 
-# Project 3 - Got Random Quotes
+# Project 3 - GOT Random Quotes
 
 Team:
 
