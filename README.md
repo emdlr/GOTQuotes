@@ -46,7 +46,7 @@ GitHub Repository:
   - Edgar :- https://github.com/emdlr/GOTQuotes/tree/edgar
   - Sachin :- https://github.com/emdlr/GOTQuotes/tree/sachin
 
-deployment :-
+deployment :- https://seigot-quotes.herokuapp.com/
 
 3rd Party API Link: https://gameofthronesquotes.xyz/
 
