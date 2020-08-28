@@ -44,7 +44,7 @@ GitHub Repository:
 - Git Sub-Branches:
 
   - Edgar :- https://github.com/emdlr/GOTQuotes/tree/edgar
-  - Sachin :- https://github.com/emdlr/GOTQuotes/tree/sachin
+  - Sachin :- https://github.com/emdlr/GOTQuotes/tree/sachin_new
 
 deployment :- https://gotrandomquotes.herokuapp.com/
 
